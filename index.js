@@ -9,7 +9,14 @@ app.set('viwes', 'views')
 app.set('view engine', 'ejs')
 
 app.set("/home_soma", (req, res) => {
-  res.rende
+  res.render("home_soma")
+})
+
+app.post("/soma", (req, res) => {
+  n1 = Number(req.body.numero1)
+  n2 = Number(req.body.numero2)
+  soma = n1 + n2
+  res.soma('resposta_soma', {soma: soma})
 })
 
 app.listen(port, () => {
