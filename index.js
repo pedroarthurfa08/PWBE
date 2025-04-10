@@ -8,13 +8,8 @@ app.set('viwes', 'views')
 
 app.set('view engine', 'ejs')
 
-app.get('/ola_form', (req, res) => {
-    res.render('ola_form')
-})
-
-app.post('/ola', (req, res) => {
-    nome = req.body.nome
-    res.send(`Olá ${nome}`)
+app.set("/home_soma", (req, res) => {
+  res.rende
 })
 
 app.listen(port, () => {
