@@ -4,8 +4,12 @@ const port = 3000
 
 app.use(express.urlencoded({extend: false}))
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
+app.set('viwes', 'views')
+
+app.set('view engine', 'ejs')
+
+app.get('/ola_form', (req, res) => {
+    res.render('ola_form')
 })
 
 app.post('/ola', (req, res) => {
